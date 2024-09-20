@@ -89,7 +89,7 @@ export const TypewriterEffectSmooth = ({
         >
           {renderWords()}
                   {/* Slide indicators */}
-      <div className="absolute z-50 w-20  -bottom-20 lg:-bottom-10 left-[42%] lg:left-[48%]   flex   gap-x-2 ">
+      <div className="absolute z-50 w-20  -bottom-5 lg:-bottom-10 left-[42%] lg:left-[48%]   flex   gap-x-2 ">
         {images.map((_, index) => (
           <div
             key={index}
