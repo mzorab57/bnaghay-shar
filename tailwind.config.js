@@ -16,7 +16,7 @@ module.exports = {
         },
       },
       animation: {
-        typewriter: 'typewriter 3s steps(10, end) 1s 1 normal both',
+        typewriter: 'typewriter 3s ease-out forwards', // smooth ease-out transition
         blink: 'blink 1s steps(1, start) infinite',
       },
     },
