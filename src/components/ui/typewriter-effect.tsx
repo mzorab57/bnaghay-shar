@@ -57,7 +57,7 @@ export const TypewriterEffectSmooth = ({
           }}
         >
           <p>Build design with</p>
-          {words.join(" ")} <span className="text-sky-300 inline-flex pt-3"> {lastWord}</span>{" "}
+          {words.join(" ")} <span className="text-sky-300 inline-flex pt-0 md:pt-3"> {lastWord}</span>{" "}
           
         </div>
        
