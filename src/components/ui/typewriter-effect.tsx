@@ -2,15 +2,11 @@ import React, { useEffect, useState } from "react";
 import { cn } from "../../utils/cn";
 import { motion } from "framer-motion";
 
-import bg1 from "../../assets/images/BGG1.jpg"; // Add your images
-import bg2 from "../../assets/images/BGG2.jpg";
-import bg3 from "../../assets/images/BGG3.jpg";
-
-const images = [bg1, bg2, bg3,bg1, bg2, bg3]; // List of images
 
 export const TypewriterEffectSmooth = ({
   className,
-  cursorClassName,
+  images
+  // cursorClassName,
 }) => {
   
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -32,12 +28,12 @@ export const TypewriterEffectSmooth = ({
   const renderWords = () => {
     
     return (
-      <div className="relative">
+      <div className="relative h-[500px] lg:h-screen">
      
         {images.map((image, index) => (
             <div
               key={index}
-              className="w-full h-screen  absolute inset-0 transition-opacity duration-1000 ease-in-out"
+              className="w-full h-full  absolute z-10  transition-opacity duration-1000 ease-in-out"
               style={{
                 backgroundImage: `url(${image})`,
                 opacity: currentIndex === index ? 1 : 0, // Only show the current image
@@ -48,21 +44,17 @@ export const TypewriterEffectSmooth = ({
                 alt={`Slide ${index}`}
                 className="w-full h-full object-cover rounded-md"
               />
-
-
+     
             </div>
-
-            
           ))}
-            
       </div>
     );
   };
 
   return (
-    <div className={cn("flex  space-x-1 my-6 h-full md:px-8 px-3 rounded-md", className)}>
+    <div className={cn("flex  space-x-1 sm:-translate-y-5 md:translate-y-0  h-[500px] lg:h-full md:px-8 p-5  rounded-md", className)}>
       <motion.div
-        className={`overflow-hidden w-full pb-2 shadow-xl shadow-blue-100/50`}
+        className={`overflow-hidden w-full  pb-2 shadow-xl shadow-blue-100/50 rounded-md`}
         initial={{
           height: "0%",
         }}
@@ -78,12 +70,25 @@ export const TypewriterEffectSmooth = ({
         }}
       >
         <div
-          className="text-xs sm:text-base md:text-xl lg:text:3xl xl:text-5xl font-bold"
+          className="text-xs sm:text-base md:text-xl lg:text:3xl xl:text-5xl font-bold rounded-md"
           style={{
             whiteSpace: "nowrap",
           }}
         >
           {renderWords()}
+                  {/* Slide indicators */}
+      <div className="absolute z-50 w-20  -bottom-5 lg:-bottom-10 left-[42%] lg:left-[48%] rounded-md  flex   gap-x-2 ">
+        {images.map((_, index) => (
+          <div
+            key={index}
+            className={`w-1 h-5 rounded-full ${
+              index === currentIndex
+                ? "bg-white"
+                : "bg-gradient-to-t from-gray-300 via-gray-400 to-transparent rounded-md"
+            }`}
+          />
+        ))}
+      </div>
         </div>
       </motion.div>
      

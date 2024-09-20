@@ -1,19 +1,19 @@
 import React from "react";
-
 import { BackgroundBeamsWithCollision } from "./background-beams-with-collision";
+
 import bg1 from "../../assets/images/BGG1.jpg";
 import bg2 from "../../assets/images/BGG2.jpg";
 import bg3 from "../../assets/images/BGG3.jpg";
 
-import { TypewriterEffectDemo } from "../../components/ui/TypewriterEffectDemo";
+import { TypewriterEffectSmooth } from "./typewriter-effect";
 
 export function BackgroundBeamsWithCollisionDemo() {
+  const images = [bg1, bg2, bg3,bg1, bg2, bg3]; // Simplified array of images
   return (
-    <BackgroundBeamsWithCollision bg1={bg1} bg2={bg2} bg3={bg3}>
-      <h2 className="text-2xl w-[1600px]  md:h-[700px] h-[550px]  relative z-10 md:text-4xl lg:text-7xl font-bold text-center text-white dark:text-white font-sans tracking-tight">
-            <TypewriterEffectDemo />
-      </h2>
-      
+    <BackgroundBeamsWithCollision >
+      <div className="w-full max-w-full md:max-w-[90%] lg:max-w-[80%] xl:max-w-[70%] md:h-[80%] h-[550px] relative z-10 flex justify-center items-center">
+        <TypewriterEffectSmooth className="w-full" images={images} />
+      </div>
     </BackgroundBeamsWithCollision>
   );
 }
