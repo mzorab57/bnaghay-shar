@@ -29,7 +29,7 @@ export const TypewriterEffectSmooth = ({
   const renderWords = () => {
     
     return (
-      <div className="relative h-[700px] lg:h-screen ">
+      <div className="relative h-[600px] lg:h-screen ">
      
         {images.map((image, index) => (
             <div
@@ -64,7 +64,7 @@ export const TypewriterEffectSmooth = ({
   };
 
   return (
-    <div className={cn("flex  space-x-1 sm:-translate-y-5 md:translate-y-0  h-[700px] lg:h-full md:px-8 p-8  ", className)}>
+    <div className={cn("flex  space-x-1 sm:-translate-y-5 md:translate-y-0  h-[600px] lg:h-full md:px-8 p-8  ", className)}>
       <motion.div
         className={`overflow-hidden w-full  pb-2 shadow-xl shadow-blue-100/50 `}
         initial={{
