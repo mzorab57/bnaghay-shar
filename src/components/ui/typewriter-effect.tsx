@@ -10,10 +10,11 @@ export const TypewriterEffectSmooth = ({
 }) => {
   
   const [currentIndex, setCurrentIndex] = useState(0);
- 
+  const [key, setKey] = useState(0); // Use a key to trigger re-render
 
   useEffect(() => {
     const interval = setInterval(() => {
+      setKey((prevKey) => prevKey + 1);
       setCurrentIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
@@ -28,7 +29,7 @@ export const TypewriterEffectSmooth = ({
   const renderWords = () => {
     
     return (
-      <div className="relative h-[500px] lg:h-screen">
+      <div className="relative h-[700px] lg:h-screen ">
      
         {images.map((image, index) => (
             <div
@@ -42,19 +43,30 @@ export const TypewriterEffectSmooth = ({
               <img
                 src={image}
                 alt={`Slide ${index}`}
-                className="w-full h-full object-cover rounded-md"
+                className="w-full h-full object-cover rounded-none "
               />
      
             </div>
           ))}
+
+          {/* text */}
+           <div className="flex absolute z-10 items-center justify-center mt-20">
+      <div
+        key={key} // Key ensures the div re-renders and restarts the animation
+        className="text-4xl  font-bold overflow-hidden border-r-4 border-black whitespace-nowrap animate-typewriter"
+      >
+        Hello, World!
+      </div>
+      <div className="h-10 w-1 bg-black animate-blink"></div>
+           </div>
       </div>
     );
   };
 
   return (
-    <div className={cn("flex  space-x-1 sm:-translate-y-5 md:translate-y-0  h-[500px] lg:h-full md:px-8 p-5  rounded-md", className)}>
+    <div className={cn("flex  space-x-1 sm:-translate-y-5 md:translate-y-0  h-[700px] lg:h-full md:px-8 p-8  ", className)}>
       <motion.div
-        className={`overflow-hidden w-full  pb-2 shadow-xl shadow-blue-100/50 rounded-md`}
+        className={`overflow-hidden w-full  pb-2 shadow-xl shadow-blue-100/50 `}
         initial={{
           height: "0%",
         }}
@@ -70,21 +82,21 @@ export const TypewriterEffectSmooth = ({
         }}
       >
         <div
-          className="text-xs sm:text-base md:text-xl lg:text:3xl xl:text-5xl font-bold rounded-md"
+          className="text-xs sm:text-base md:text-xl lg:text:3xl xl:text-5xl font-bold "
           style={{
             whiteSpace: "nowrap",
           }}
         >
           {renderWords()}
                   {/* Slide indicators */}
-      <div className="absolute z-50 w-20  -bottom-5 lg:-bottom-10 left-[42%] lg:left-[48%] rounded-md  flex   gap-x-2 ">
+      <div className="absolute z-50 w-20  -bottom-20 lg:-bottom-10 left-[42%] lg:left-[48%]   flex   gap-x-2 ">
         {images.map((_, index) => (
           <div
             key={index}
-            className={`w-1 h-5 rounded-full ${
+            className={`w-1 h-5  ${
               index === currentIndex
                 ? "bg-white"
-                : "bg-gradient-to-t from-gray-300 via-gray-400 to-transparent rounded-md"
+                : "bg-gradient-to-t from-gray-300 via-gray-400 to-transparent "
             }`}
           />
         ))}
