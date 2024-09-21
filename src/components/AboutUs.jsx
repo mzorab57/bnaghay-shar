@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import aboutUs from "../assets/images/aboutUs.jpeg";
-import architectureImg from "../assets/images/BGG1.jpg";
-import interiorDesignImg from "../assets/images/BGG2.jpg";
-import design3DImg from "../assets/images/BGG3.jpg";
+import aboutUs from "../assets/images/about1.jpg";
+import aboutSub from "../assets/images/aboutArch.jpg";
+import aboutIntrrior from "../assets/images/aboute-interior1.jpg";
+import about3d from "../assets/images/about3d.jpg";
 
 const AboutUs = () => {
   // State to manage the active tab
@@ -14,19 +14,19 @@ const AboutUs = () => {
       heading: "We Provide You The Best Experience.",
       description:
         "We are committed to impeccable craftsmanship and luxury, reflected in all we do. We offer span furniture and many accessories.",
-      image: architectureImg,
+      image: aboutSub,
     },
     interior: {
       heading: "Interior Design Tailored to Your Style.",
       description:
         "Our interior design services bring beauty, comfort, and functionality to your spaces, making them truly yours.",
-      image: interiorDesignImg,
+      image: aboutIntrrior,
     },
     design3D: {
       heading: "3D Design for Your Dream Space.",
       description:
         "With 3D design, visualize your ideas with clarity and precision. See your dream space come to life before it’s built.",
-      image: design3DImg,
+      image: about3d,
     },
   };
 
@@ -46,7 +46,7 @@ const AboutUs = () => {
             <img
               src={aboutUs}
               alt="about"
-              className="border border-white size-full object-cover  brightness-125 shadow-xl "
+              className=" size-full object-cover animate scale-105 lg:scale-110  "
             />
           </div>
 
