@@ -20,7 +20,7 @@ const CustomSwiper = () => {
   }, []);
 
   return (
-    <div className="absolute z-0 w-full h-screen  flex justify-center items-center bg-gray-800 ">
+    <div className="absolute z-0 w-full h-screen  flex justify-center items-center bg-black ">
       {/* Slide Container */}
       <div className="w-full h-full overflow-hidden relative">
         <div
@@ -33,7 +33,7 @@ const CustomSwiper = () => {
           {images.map((image, index) => (
             <div
               key={index}
-              className="min-w-full h-screen blur-md transition-opacity duration-1000 ease-in-out"
+              className="min-w-full h-screen blur-sm  transition-opacity duration-1000 ease-in-out"
               style={{
                 backgroundImage: `url(${image})`,
                 opacity: currentIndex === index ? 1 : 0, // Only show the current image

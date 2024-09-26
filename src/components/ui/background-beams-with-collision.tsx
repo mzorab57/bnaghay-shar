@@ -61,7 +61,7 @@ export const BackgroundBeamsWithCollision = ({
     <div
       ref={parentRef}
       className={cn(
-        "h-screen relative flex items-center w-full justify-center overflow-hidden",
+        "h-screen   relative flex items-center w-full justify-center overflow-hidden",
         className
       )}
     >
@@ -88,7 +88,7 @@ export const BackgroundBeamsWithCollision = ({
 };
 
 const CollisionMechanism = React.forwardRef<HTMLDivElement, CollisionMechanismProps>(
-  ({ parentRef, containerRef, beamOptions }) => {
+  ({ parentRef, containerRef, beamOptions }, ref) => {
     const beamRef = useRef(null);
     const [collision, setCollision] = useState({
       detected: false,
@@ -204,7 +204,7 @@ const Explosion = (props) => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        className="absolute -inset-x-10 top-0 m-auto h-56 w-10 rounded-full bg-gradient-to-r from-transparent via-gray-400 to-transparent blur-sm"
+        className="absolute  -inset-x-10 top-0 m-auto h-56 w-10 rounded-full bg-gradient-to-r from-transparent via-gray-400 to-transparent blur-sm"
       ></motion.div>
       {spans.map((span) => (
         <motion.span

@@ -104,14 +104,14 @@ export const TypewriterEffectSmooth = ({
         >
           {renderWords()}
           {/* Slide indicators */}
-          <div className="absolute z-50 w-20  -bottom-10  lg:-bottom-10 left-[42%] lg:left-[48%]   flex   gap-x-2 ">
+          <div className="absolute z-50 w-20   -bottom-10  lg:-bottom-10 left-[42%] lg:left-[48%]   flex   gap-x-2 ">
             {images.map((_, index) => (
               <div
                 key={index}
                 className={`w-1 h-5  ${
                   index === currentIndex
-                    ? "bg-white"
-                    : "bg-gradient-to-t from-gray-300 via-gray-400 to-transparent "
+                    ? "bg-white rounded-full"
+                    : "bg-gradient-to-t from-gray-300 rounded-full via-gray-400 to-transparent "
                 }`}
               />
             ))}
