@@ -84,10 +84,10 @@ export const TypewriterEffectSmooth = ({
       <motion.div
         className={`overflow-hidden w-full  pb-2 shadow-lg shadow-blue-50/50 `}
         initial={{
-          height: "0%",
+          opacity: "0%",
         }}
         animate={{
-          height: "100%",
+          opacity: "100%",
         }}
         transition={{
           duration: 2, // Animation duration for text reveal
