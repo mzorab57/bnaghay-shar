@@ -86,7 +86,7 @@ const FeaturedService = () => {
                  loading="lazy"
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-[400px] md:h-[500px] lg:h-[600px] rounded-2xl object-cover "
+                  className="w-full h-[400px] md:h-[500px] lg:h-[600px]  object-cover "
                 />
                 <div className="p-4 text-left absolute top-0  size-full">
                   <h3 className="text-sm font-semibold text-white">{service.category}</h3>
