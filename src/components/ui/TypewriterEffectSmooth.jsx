@@ -44,9 +44,9 @@ export const TypewriterEffectSmooth = ({ images }) => {
   };
 
   return (
-    <div className={"relative h-[600px] lg:h-[700px] w-[1200px] mx-4   "}>
+    <div className={"relative h-[550px] lg:h-[700px] w-[1200px] mx-6  shadow-lg shadow-gray-50/20 "}>
       <motion.div
-        className="  "
+        className=" "
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{

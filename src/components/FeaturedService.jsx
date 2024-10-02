@@ -10,44 +10,6 @@ import bg_3 from '../assets/images/BGG3.webp';
 
 import { SiAffinitydesigner } from "react-icons/si";
 
-// Custom Left Arrow Component
-const PrevArrow = ({ onClick }) => (
-  <button
-    className="slick-prev"
-    style={{ display: "block", left: "-16px" }} // Adjust arrow position
-    onClick={onClick}
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      className="w-6 h-6 text-black"
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
-    </svg>
-  </button>
-);
-
-// Custom Right Arrow Component
-const NextArrow = ({ onClick }) => (
-  <button
-    className="slick-next"
-    style={{ display: "block", right: "-16px" }} // Adjust arrow position
-    onClick={onClick}
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      className="w-6 h-6 text-black"
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-    </svg>
-  </button>
-);
-
 // Featured Service Component
 const FeaturedService = () => {
   // Service data
@@ -71,7 +33,7 @@ const FeaturedService = () => {
       icon: <SiAffinitydesigner size={30} />
     },
     {
-      title: 'Decoration art',
+      title: 'Decoration Art',
       image: bg_3,
       category: 'Architecture',
       icon: <SiAffinitydesigner size={30} />
@@ -82,17 +44,18 @@ const FeaturedService = () => {
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+    centerMode: true, // Enable centered slides with half-visible images
+    centerPadding: "60px 0px 0px 0px", // Apply 100px padding-left and 0 padding-right
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1084,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          infinite: true,
+          centerMode: true,
+          centerPadding: "30px 0px 0px 0px", // Apply 100px padding-left and 0 padding-right
         },
       },
       {
@@ -100,6 +63,8 @@ const FeaturedService = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: "30px 0px 0px 0px", // Apply 100px padding-left and 0 padding-right
         },
       },
     ],
@@ -107,28 +72,29 @@ const FeaturedService = () => {
 
   return (
     <section className="py-12 bg-white max-w-[1500px] m-auto">
-      <div className="text-center"> {/* Changed from text-center to text-left */}
-        <h3 className="text-sm font-semibold text-gray-400">Service We Do</h3>
-        <h2 className="text-3xl font-bold text-black my-2">Our Featured Service</h2>
+      <div className="text-center">
+        <h3 className="text-sm font-semibold text-gray-400">Work We Offer</h3>
+        <h2 className="text-3xl font-bold text-black my-2">Our Featured Work</h2>
       </div>
 
       <div className="container mx-auto px-4">
         <Slider {...settings}>
           {services.map((service, index) => (
             <div key={index} className="px-4">
-              <div className="border overflow-hidden shadow-lg">
+              <div className=" overflow-hidden  relative">
                 <img
                  loading="lazy"
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-64 object-cover"
+                  className="w-full h-[400px] md:h-[500px] lg:h-[600px] rounded-2xl object-cover "
                 />
-                <div className="p-4 text-left"> {/* Changed from text-center to text-left */}
-                  <h3 className="text-sm font-semibold text-gray-400">{service.category}</h3>
-                  <h2 className="text-lg font-bold text-black my-2 flex justify-between items-center">
-                    {/* VS Icon/Label */}
-                    <span className="mr-2">{service.title}</span>
-                    <span className="text-red-200 font-semibold">{service.icon}</span> {/* "VS" Icon */}
+                <div className="p-4 text-left absolute top-0  size-full">
+                  <h3 className="text-sm font-semibold text-white">{service.category}</h3>
+                  <h2 className="text-lg font-bold text-white my-2 flex justify-between items-center">
+                    <span className="mr-2">{service.title}
+                    <span className="text-yellow-200 font-semibold animate-pulse">{service.icon}</span> 
+                    </span>
+                      
                   </h2>
                 </div>
               </div>
