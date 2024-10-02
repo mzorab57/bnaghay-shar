@@ -1,6 +1,7 @@
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
-export function cn(...inputs) {
-  return twMerge(clsx(inputs));
+// Utility function to conditionally merge Tailwind CSS class names
+export function cn(...classes) {
+  return twMerge(clsx(...classes));
 }

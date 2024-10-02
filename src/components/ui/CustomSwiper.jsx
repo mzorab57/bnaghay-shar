@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import bg1 from "../../assets/images/BGG1.jpg"; // Add your images
-import bg2 from "../../assets/images/BGG2.jpg";
-import bg3 from "../../assets/images/BGG3.jpg";
+import bg1 from "../../assets/images/BGG1.webp"; // Add your images
+import bg2 from "../../assets/images/BGG2.webp";
+import bg3 from "../../assets/images/BGG3.webp";
 
 const images = [bg1, bg2, bg3, bg1, bg2, bg3]; // List of images
 
@@ -40,6 +40,7 @@ const CustomSwiper = () => {
               }}
             >
               <img
+               loading="lazy"
                 src={image}
                 alt={`Slide ${index}`}
                 className="w-full h-full object-cover"

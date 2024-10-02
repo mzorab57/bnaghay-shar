@@ -1,9 +1,9 @@
 import React from "react";
 import HeroParallax from "./HeroParallax"; // Import the HeroParallax component
-import aboutUs from "../../assets/images/about1.jpg";
-import aboutSub from "../../assets/images/aboutArch.jpg";
-import aboutIntrrior from "../../assets/images/aboute-interior1.jpg";
-import about3d from "../../assets/images/about3d.jpg";
+import aboutUs from "../../assets/images/about1.webp";
+import aboutSub from "../../assets/images/aboutArch.webp";
+import aboutIntrrior from "../../assets/images/aboute-interior1.webp";
+import about3d from "../../assets/images/about3d.webp";
 
 const products = [
  

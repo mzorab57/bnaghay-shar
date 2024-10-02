@@ -4,9 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // Import images
-import bg_1 from '../assets/images/BGG1.jpg';
-import bg_2 from '../assets/images/BGG2.jpg';
-import bg_3 from '../assets/images/BGG3.jpg';
+import bg_1 from '../assets/images/BGG1.webp';
+import bg_2 from '../assets/images/BGG2.webp';
+import bg_3 from '../assets/images/BGG3.webp';
 
 import { SiAffinitydesigner } from "react-icons/si";
 
@@ -118,6 +118,7 @@ const FeaturedService = () => {
             <div key={index} className="px-4">
               <div className="border overflow-hidden shadow-lg">
                 <img
+                 loading="lazy"
                   src={service.image}
                   alt={service.title}
                   className="w-full h-64 object-cover"

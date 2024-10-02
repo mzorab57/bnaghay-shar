@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import aboutUs from "../assets/images/about1.jpg";
-import aboutSub from "../assets/images/aboutArch.jpg";
-import aboutIntrrior from "../assets/images/aboute-interior1.jpg";
-import about3d from "../assets/images/about3d.jpg";
+import aboutUs from "../assets/images/about1.webp";
+import aboutSub from "../assets/images/aboutArch.webp";
+import aboutIntrrior from "../assets/images/aboute-interior1.webp";
+import about3d from "../assets/images/about3d.webp";
 
 const AboutUs = () => {
   // State to manage the active tab
@@ -44,6 +44,7 @@ const AboutUs = () => {
           {/* Left image container */}
           <div className="lg:w-1/2 h-full ">
             <img
+             loading="lazy"
               src={aboutUs}
               alt="about"
               className=" size-full  object-cover scale-105   "

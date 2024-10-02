@@ -1,11 +1,11 @@
 import React from 'react';
 import ServiceCard from './ui/ServiceCard';
-import aboutUs from "../assets/images/about1.jpg";
-import aboutSub from "../assets/images/aboutArch.jpg";
-import aboutIntrrior from "../assets/images/aboute-interior1.jpg";
-import about3d from "../assets/images/about3d.jpg";
+import aboutUs from "../assets/images/about1.webp";
+import aboutSub from "../assets/images/aboutArch.webp";
+import aboutIntrrior from "../assets/images/aboute-interior1.webp";
+import about3d from "../assets/images/about3d.webp";
 import icon from "../assets/images/interior-01.png";
-import icon3 from "../assets/images/interior-03.jpg";
+import icon3 from "../assets/images/interior-03.webp";
 import icon4 from "../assets/images/interior-04.png";
 import icon12 from "../assets/images/interior-10.png";
 

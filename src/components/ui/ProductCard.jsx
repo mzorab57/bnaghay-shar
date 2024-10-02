@@ -15,6 +15,7 @@ const ProductCard = ({ product, translate }) => {
     >
       <Link to={product.link} className="block group-hover/product:shadow-2xl">
         <img
+          loading="lazy"
           src={product.thumbnail}
           alt={product.title}
           className="object-cover object-left-top absolute h-full w-full inset-0"
