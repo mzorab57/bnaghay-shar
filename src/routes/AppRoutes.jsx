@@ -23,6 +23,7 @@ const AppRoutes = ({ setMenuOpen }) => {
               <ServicesSection />
               <Stats />
               <FeaturedService />
+              <Stats />
             </>
           }
         />
