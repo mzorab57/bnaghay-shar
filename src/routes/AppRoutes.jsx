@@ -7,10 +7,10 @@ import HeroParallaxDemo from "../components/ui/HeroParallaxDemo";
 import ServicesSection from "../components/ServicesSection";
 import Stats from "../components/Stats";
 
-const AppRoutes = ({ setMenuOpen }) => {
+const AppRoutes = () => {
   return (
     // aw set show service bo awaia katek mouse lasar page lachu la har shwenek bet colse aw hover bkat
-    <div onMouseOut={() => setMenuOpen(false)}>
+    <div >
       <Routes>
         <Route
           index

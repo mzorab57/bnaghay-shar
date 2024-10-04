@@ -42,13 +42,36 @@ const AboutUs = () => {
         {/* Flex container */}
         <div className="flex flex-col   items-center  lg:flex-row gap-x-10 ">
           {/* Left image container */}
-          <div className="lg:w-1/2 h-full ">
-            <img
+          {/* <div className="lg:w-1/2 h-full ">
+             <img
              loading="lazy"
               src={aboutUs}
               alt="about"
               className=" size-full  object-cover scale-105   "
-            />
+            />  </div>*/}
+          {/* 3D Model of a House */}
+          <div className="container mx-auto w-full h-[500px] md:h-[500px] lg:h-[800px] lg:max-w-[1100px] overflow-hidden">
+            <model-viewer
+              src="/tower.glb"
+              alt="3D House Model"
+              auto-rotate
+              camera-controls
+              
+              shadow-intensity="1"
+              shadow-softness="1"
+              // Zoom out limit 
+              min-camera-orbit="auto 0deg 0m"    
+              // Zoom in limit 
+              // max-camera-orbit="auto 90deg 1m"   
+              // Min zoom-in (closer view)  bo nzik krdnaway model ka la saratawa pshan adre
+              // min-field-of-view="0deg"         
+              // Max zoom-out (farther view) bo dwr krdnaway model ka la saratawa pshan adre
+              // max-field-of-view="0deg"          
+              style={{ width: "100%", height: "100%" }}
+              ar
+            ></model-viewer>
+            {/* <!-- This div will cover the icon  */}
+            <div class="absolute bottom-0 left-0 w-full h-[40px] bg-transparent z-10"></div>
           </div>
 
           {/* Right text container */}
@@ -60,7 +83,6 @@ const AboutUs = () => {
             <p className="text-gray-500 text-md mb-6 max-w-xl">
               {content[activeTab].description}
             </p>
-            
 
             {/* Navigation Tabs */}
             <div className="flex md:space-x-10 space-x-4 mb-6 whitespace-nowrap">
