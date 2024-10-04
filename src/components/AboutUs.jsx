@@ -56,22 +56,26 @@ const AboutUs = () => {
               alt="3D House Model"
               auto-rotate
               camera-controls
-              
+              loading="lazy" // Enable lazy loading
               shadow-intensity="1"
-              shadow-softness="1"
-              // Zoom out limit 
-              min-camera-orbit="auto 0deg 0m"    
-              // Zoom in limit 
-              // max-camera-orbit="auto 90deg 1m"   
+              shadow-softness="0.75"
+              //  min-camera-orbit="auto auto 0m"
+              //  max-camera-orbit="auto auto 00m"
+              environment-image="neutral" // Adds realistic lighting environment
+              exposure="1" // Controls the brightness
+              // Zoom out limit
+              min-camera-orbit="auto 0deg 0m"
+              // Zoom in limit
+              // max-camera-orbit="auto 90deg 1m"
               // Min zoom-in (closer view)  bo nzik krdnaway model ka la saratawa pshan adre
-              // min-field-of-view="0deg"         
+              // min-field-of-view="0deg"
               // Max zoom-out (farther view) bo dwr krdnaway model ka la saratawa pshan adre
-              // max-field-of-view="0deg"          
+              // max-field-of-view="0deg"
               style={{ width: "100%", height: "100%" }}
               ar
             ></model-viewer>
-            {/* <!-- This div will cover the icon  */}
-            <div class="absolute bottom-0 left-0 w-full h-[40px] bg-transparent z-10"></div>
+            {/* Div to cover the Sketchfab logo */}
+            <div className="absolute bottom-0 left-0 w-full h-[50px] bg-transparent z-10"></div>
           </div>
 
           {/* Right text container */}
