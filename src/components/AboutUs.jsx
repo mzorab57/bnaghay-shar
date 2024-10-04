@@ -52,7 +52,7 @@ const AboutUs = () => {
           {/* 3D Model of a House */}
           <div className="container mx-auto w-full h-[500px] md:h-[500px] lg:h-[800px] lg:max-w-[1100px] overflow-hidden">
             <model-viewer
-              src="/tower (1).glb"
+              src="/tower DRACO ktx2u (512).glb"
               alt="3D House Model"
               auto-rotate
               camera-controls
