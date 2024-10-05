@@ -1,29 +1,14 @@
 import React, { useState, useEffect } from "react";
 
 const ModelViewerComponent = () => {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate a loading delay of 3 seconds (you can adjust this value)
-    const timer = setTimeout(() => {
-      setIsLoading(false); // Set loading to false after 3 seconds
-    }, 4000); // 3000 milliseconds = 3 seconds
-
-    // Clean up the timer on component unmount
-    return () => clearTimeout(timer);
-  }, []);
+ 
 
   return (
     <div className="container relative mx-auto w-full h-[500px] lg:h-[800px] lg:max-w-[1100px] overflow-hidden">
-      {isLoading && (
-        // Loading indicator while the model is loading
-        <div className="flex justify-center items-center w-full h-full">
-          <p className="text-lg font-bold">Loading 3D Model...</p>
-        </div>
-      )}
+     
         {/* // Once loading is done, show the model */}
         <model-viewer
-          src="/tower DRACO webp (128).glb"
+          src="/models/scene.gltf"
           alt="3D House Model"
           auto-rotate
           camera-controls
