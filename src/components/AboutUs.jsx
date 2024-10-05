@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import aboutUs from "../assets/images/about1.webp";
+
 import aboutSub from "../assets/images/aboutArch.webp";
 import aboutIntrrior from "../assets/images/aboute-interior1.webp";
 import about3d from "../assets/images/about3d.webp";
@@ -37,11 +37,12 @@ const AboutUs = () => {
   };
 
   return (
-    <div className=" py-20">
+    <div className=" py-0">
       {/* Main container */}
       <div className="container max-w-[1500px]  m-auto p-6">
         {/* Flex container */}
         <div className="flex flex-col   items-center  lg:flex-row gap-x-10 ">
+          
           {/* Left image container */}
           {/* <div className="lg:w-1/2 h-full ">
              <img
@@ -50,9 +51,8 @@ const AboutUs = () => {
               alt="about"
               className=" size-full  object-cover scale-105   "
             />  </div>*/}
-          
          
-
+ <ModelViewerComponent />
           {/* Right text container */}
           <div className=" max-w-4xl  w-full mt-6 md:mt-0 md:pl-10 p-3">
             <h1 className="text-2xl">About Us</h1>
@@ -131,7 +131,9 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
-          <ModelViewerComponent />
+          
+         
+
         </div>
       </div>
     </div>
