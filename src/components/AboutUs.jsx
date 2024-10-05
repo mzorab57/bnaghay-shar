@@ -51,7 +51,7 @@ const AboutUs = () => {
               className=" size-full  object-cover scale-105   "
             />  </div>*/}
           
-          <ModelViewerComponent />
+         
 
           {/* Right text container */}
           <div className=" max-w-4xl  w-full mt-6 md:mt-0 md:pl-10 p-3">
@@ -131,6 +131,7 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
+          <ModelViewerComponent />
         </div>
       </div>
     </div>
