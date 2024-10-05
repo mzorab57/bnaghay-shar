@@ -7,7 +7,7 @@ const ModelViewerComponent = () => {
     // Simulate a loading delay of 3 seconds (you can adjust this value)
     const timer = setTimeout(() => {
       setIsLoading(false); // Set loading to false after 3 seconds
-    }, 2000); // 3000 milliseconds = 3 seconds
+    }, 4000); // 3000 milliseconds = 3 seconds
 
     // Clean up the timer on component unmount
     return () => clearTimeout(timer);
