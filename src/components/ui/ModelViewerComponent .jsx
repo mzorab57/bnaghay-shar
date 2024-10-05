@@ -8,7 +8,7 @@ const ModelViewerComponent = () => {
      
         {/* // Once loading is done, show the model */}
         <model-viewer
-          src="/models/scene.gltf"
+          src="tower DRACO webp (128).glb"
           alt="3D House Model"
           auto-rotate
           camera-controls
