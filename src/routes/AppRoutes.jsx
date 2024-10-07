@@ -6,6 +6,7 @@ import FeaturedService from "../components/FeaturedService";
 import HeroParallaxDemo from "../components/ui/HeroParallaxDemo";
 import ServicesSection from "../components/ServicesSection";
 import Stats from "../components/Stats";
+import VideoWorks from "../components/VideoWorks";
 
 const AppRoutes = () => {
   return (
@@ -23,7 +24,7 @@ const AppRoutes = () => {
               <ServicesSection />
               <Stats />
               <FeaturedService />
-              <Stats />
+              <VideoWorks />
             </>
           }
         />

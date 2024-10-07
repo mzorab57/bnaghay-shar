@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Navbar from "./layouts/Navbar";
 import AppRoutes from "./routes/AppRoutes";
 import { BrowserRouter } from "react-router-dom";
@@ -11,6 +11,7 @@ const App = () => {
     <BrowserRouter>
       <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
       <AppRoutes />
+     
     </BrowserRouter>
   );
 };
