@@ -11,9 +11,12 @@ import bg_4 from '../assets/images/BGG4.jpg';
 import bg_5 from '../assets/images/bnaghashar_logo.png';
 
 import { SiAffinitydesigner } from "react-icons/si";
+import { useNavigate } from 'react-router-dom';
 
 // Featured Service Component
 const FeaturedService = () => {
+
+  const history = useNavigate()
   // Service data
   const services = [
     {
@@ -78,6 +81,12 @@ const FeaturedService = () => {
     ],
   };
 
+  const handelClick = () => {
+    history("/galary")
+    
+  }
+  
+
   return (
     <section className="py-12 bg-gray-50 m-auto bg-no-repeat relative">
       <img src={bg_5} alt='mjk' className='absolute mt-5 top-[20%] lg:hidden' />
@@ -86,11 +95,11 @@ const FeaturedService = () => {
         <h2 className="text-3xl font-bold text-black my-2">Our Featured Work</h2>
       </div>
 
-      <div className="container max-w-[1450px] mx-auto px-4">
+      <div className="container max-w-[1500px] mx-auto">
         <Slider {...settings}>
           {services.map((service, index) => (
-            <div key={index} className="px-4">
-              <div className="overflow-hidden relative">
+            <div key={index} onClick={()=> handelClick()} className="px-2">
+              <div  className="overflow-hidden relative">
                 <img
                   loading="lazy"
                   src={service.image}
