@@ -20,10 +20,12 @@ export const TypewriterEffectSmooth = ({ images }) => {
   // Renders the words and the background images
   const renderWords = () => {
     return (
-      <div className="size-full ">
+      <div
+      className="size-full ">
         {/* Background images with fade-in effect */}
         {images.map((image, index) => (
           <div
+         
             key={index}
             className="absolute size-full transition-opacity duration-1000 ease-in-out"
             style={{
@@ -47,8 +49,8 @@ export const TypewriterEffectSmooth = ({ images }) => {
     <div className={"relative h-[550px] lg:h-[700px] w-[1200px] mx-6  shadow-lg shadow-gray-50/20 "}>
       <motion.div
         className=" "
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        initial={{ height: 100, opacity:0 }}
+        animate={{ height: 0, opacity:1  }}
         transition={{
           duration: 2,
           ease: "linear",
@@ -64,7 +66,7 @@ export const TypewriterEffectSmooth = ({ images }) => {
             key={key}
             className="  max-w-2xl text-white font-semibold text-2xl md:text-4xl xl:text-6xl whitespace-nowrap overflow-hidden"
             style={{
-              transition: "width 0.4s ease-out",
+              transition: "width 0.4s  ease-out",
             }}
           >
             <p>Build design with</p>

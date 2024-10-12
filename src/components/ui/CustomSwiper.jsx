@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import bg1 from "../../assets/images/BGG1.webp"; // Add your images
 import bg2 from "../../assets/images/BGG2.webp";
 import bg3 from "../../assets/images/BGG3.webp";
+import bg4 from "../../assets/images/BGG4.jpg";
 
-const images = [bg1, bg2, bg3, bg1, bg2, bg3]; // List of images
+const images = [bg1,bg2,bg3,bg4,bg1, bg2, bg3,bg4]; // List of images
 
 const CustomSwiper = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -50,7 +51,7 @@ const CustomSwiper = () => {
         </div>
       </div>
 
-      {/* Slide indicators
+      {/* Slide indicators */}
       <div className="absolute  w-20  bottom-8  flex gap-x-2 ">
         {images.map((_, index) => (
           <div
@@ -62,7 +63,7 @@ const CustomSwiper = () => {
             }`}
           />
         ))}
-      </div> */}
+      </div>
     </div>
   );
 };

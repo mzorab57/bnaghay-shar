@@ -44,7 +44,7 @@ const Galary = () => {
             <h2 className="text-3xl text-white font-bold">3 Columns Grid v1</h2>
             <ul className="flex justify-center space-x-2 text-gray-300 mt-4">
               <li>
-                <a href="index.html" className="hover:text-yellow-500">
+                <a href="/" className="hover:text-yellow-500">
                   Home
                 </a>
               </li>
