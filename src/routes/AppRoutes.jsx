@@ -8,6 +8,7 @@ import ServicesSection from "../components/ServicesSection";
 import Stats from "../components/Stats";
 import VideoWorks from "../components/VideoWorks";
 import Galary from "../pages/Galary";
+import Footer from "../layouts/Footer";
 
 
 const AppRoutes = () => {
@@ -27,6 +28,7 @@ const AppRoutes = () => {
               <Stats />
               <FeaturedService />
               <VideoWorks />
+              <Footer />
         
             </>
           }

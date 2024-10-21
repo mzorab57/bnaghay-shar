@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      brightness: {
+        '30': '0.3',  // Adding custom brightness at 30%
+      },
       keyframes: {
         typewriter: {
           '0%': { width: '0%' },
