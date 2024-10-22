@@ -14,7 +14,7 @@ const Footer = () => {
     <footer className="relative">
       {/* Background Image with Black Overlay */}
       <div
-        className="absolute inset-0 brightness-30  "
+        className="absolute inset-0 brightness-30   "
         style={{ backgroundImage: `url(${footerbg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
       ></div>
 

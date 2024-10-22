@@ -2,9 +2,12 @@ import React from "react";
 
 import VideoText from "./ui/VideoText";
 import VideoCard from "./ui/VideoCard";
-import bg_1 from "../assets/images/BGG1.webp";
-import bg_2 from "../assets/images/BGG2.webp";
-import bg_3 from "../assets/images/BGG3.webp";
+// import bg_1 from "../assets/images/BGG1.webp";
+// import bg_2 from "../assets/images/BGG2.webp";
+// import bg_3 from "../assets/images/BGG3.webp";
+import videoInter from "../assets/videos/interior-video.mp4";
+import videoFlka from "../assets/videos/video-flka.mp4";
+
 
 
 const VideoWorks = () => {
@@ -21,19 +24,19 @@ const VideoWorks = () => {
             number="01"
             title="Modern Family House"
             description="Architecture – Luxury Living"
-            imgSrc={bg_2}
+            videoSrc={videoInter}
           />
           <VideoCard
             number="02"
             title="Student Residence Areosa"
             description="Architecture – Luxury Living"
-            imgSrc={bg_1}
+            videoSrc={videoFlka}
           />
           <VideoCard
             number="03"
             title="Casa El Maqui"
             description="Architecture – Luxury Living"
-            imgSrc={bg_3}
+            videoSrc={videoInter}
           />
         </div>
       </main>
