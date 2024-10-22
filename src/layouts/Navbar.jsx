@@ -1,129 +1,131 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import logo from '../assets/images/bnaghashar_logo.png';
+import { Cross as Hamburger } from "hamburger-react";
+import { HiHome } from "react-icons/hi2";
 
-const Navbar = ({isOpen,setIsOpen}) => {
+
+const Navbar = ({ isOpen, setIsOpen }) => {
+  const [color, setColor] = useState(false);
+  const [clickedIndex, setClickedIndex] = useState(null); // Track which link is clicked
+
+  // Change the header color when the user scrolls
+  const changeHeaderColor = () => {
+    window.scrollY >= 20 ? setColor(true) : setColor(false);
+  };
+  window.addEventListener("scroll", changeHeaderColor);
+
+  // Framer-motion variants for link animation
+  const linkVariants = {
+    hidden: { x: -100, opacity: 0 },
+    visible: { x: 0, opacity: 1, transition: { duration: 1 } },
+  };
+
+  // Variant for the clicked link to move the ✄ and hide text
+  const clickedLinkVariants = {
+    initial: { x: 0, opacity: 1 },
+    clicked: { x: 100, opacity: 0, transition: { duration: 1 } },
+  };
+
+  const handleLinkClick = (index) => {
+    setClickedIndex(index); // Set the clicked link index
+    setTimeout(() => setIsOpen(false), 900); // Delay closing to allow animation
+  };
+
   return (
-    <nav className="bg-transparent text-white fixed w-full z-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            {/* <a href="/">
-              <img
-                className="h-8 w-auto"
-                src="/logo.svg" // Replace with your logo
-                alt="Architecture Logo"
+    <>
+      {/* Navbar */}
+      <nav className={`text-white fixed w-full z-50 flex justify-between items-center ${color ? 'backdrop-blur-md' : 'bg-transparent'}`}>
+        {/* Navbar Container */}
+        <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-28">
+            {/* Logo */}
+            <div className="flex-shrink-0">
+              <a href="/">
+                <img
+                  className="size-20"
+                  src={logo} // Replace with your logo
+                  alt="Architecture Logo"
+                />
+              </a>
+            </div>
+
+            {/* Desktop Menu */}
+            <div className="hidden md:flex space-x-8">
+              {['home', 'about', 'services', 'portfolio', 'contact'].map((link) => (
+                <a
+                  key={link}
+                  href={`#${link}`}
+                  className="text-white hover:text-indigo-600 px-3 py-2 rounded-md text-lg font-medium capitalize"
+                >
+                  {link.replace(/-/g, ' ')}
+                </a>
+              ))}
+            </div>
+
+            {/* Mobile Hamburger Icon */}
+            <div className="md:hidden text-gray-300">
+              <Hamburger
+                toggled={isOpen}
+                toggle={setIsOpen}
+                size={28}
+                duration={0.3}
+                rounded
               />
-            </a> */}
-          </div>
-
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
-            <a
-              href="#home"
-              className="text-white hover:text-indigo-600 px-3 py-2 rounded-md text-lg font-medium"
-            >
-              Home
-            </a>
-            <a
-              href="#about"
-              className="text-white hover:text-indigo-600 px-3 py-2 rounded-md text-lg font-medium"
-            >
-              About Us
-            </a>
-            <a
-              href="#services"
-              className="text-white hover:text-indigo-600 px-3 py-2 rounded-md text-lg font-medium"
-            >
-              Services
-            </a>
-            <a
-              href="#portfolio"
-              className="text-white hover:text-indigo-600 px-3 py-2 rounded-md text-lg font-medium"
-            >
-              Portfolio
-            </a>
-            <a
-              href="#contact"
-              className="text-white hover:text-indigo-600 px-3 py-2 rounded-md text-lg font-medium"
-            >
-              Contact
-            </a>
-          </div>
-
-          {/* Mobile Hamburger Icon */}
-          <div className="flex md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              type="button"
-              className="text-white hover:text-indigo-600 focus:outline-none focus:text-indigo-600"
-            >
-              {/* <svg
-                className="h-6 w-6"
-                // xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                {isOpen ? (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                ) : (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16m-7 6h7"
-                  />
-                )}
-              </svg> */}
-            </button>
+            </div>
           </div>
         </div>
-      </div>
+      </nav>
 
-      {/* Mobile Menu */}
+      {/* Background Blur and Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-btext-white shadow-md">
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            <a
-              href="#home"
-              className="block text-white hover:text-indigo-600 px-3 py-2 rounded-md text-lg font-medium"
-            >
-              Home
-            </a>
-            <a
-              href="#about"
-              className="block text-white hover:text-indigo-600 px-3 py-2 rounded-md text-lg font-medium"
-            >
-              About Us
-            </a>
-            <a
-              href="#services"
-              className="block text-white hover:text-indigo-600 px-3 py-2 rounded-md text-lg font-medium"
-            >
-              Services
-            </a>
-            <a
-              href="#portfolio"
-              className="block text-white hover:text-indigo-600 px-3 py-2 rounded-md text-lg font-medium"
-            >
-              Portfolio
-            </a>
-            <a
-              href="#contact"
-              className="block text-white hover:text-indigo-600 px-3 py-2 rounded-md text-lg font-medium"
-            >
-              Contact
-            </a>
-          </div>
-        </div>
-      )}
-    </nav>
-  )
-}
+        <>
+          {/* Background Blur Effect */}
+          <div className="fixed inset-0 md:hidden block bg-black bg-opacity-40 backdrop-blur-md z-40"></div>
 
-export default Navbar
+          {/* Mobile Menu */}
+          <div className="md:hidden fixed flex justify-center items-center h-full w-full z-50">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              className="px-2 pt-2 pb-3 space-y-2"
+            >
+              {['home', 'about', 'services', 'portfolio', 'contact'].map((link, index) => (
+                <motion.div
+                  key={link}
+                  className="text-white px-3 py-2 rounded-md text-lg font-medium capitalize flex items-center"
+                  variants={linkVariants}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  <motion.span
+                    variants={clickedLinkVariants}
+                    initial="initial"
+                    animate={clickedIndex === index ? 'clicked' : 'initial'}
+                    onClick={() => handleLinkClick(index)} // Trigger animation and menu close
+                    className={`mr-2 cursor-pointer ${clickedIndex === index ? 'text-sky-300' : ''}`}
+                  >
+                    <HiHome className={` ${clickedIndex === index ? 'text-sky-300' : ''}`} />
+                  </motion.span>
+                  <motion.a
+                    href={`#${link}`}
+                    onClick={() => handleLinkClick(index)} // Close the menu when a link is clicked
+                    className={`cursor-pointer ${clickedIndex === index ? 'text-sky-300' : ''}`}
+                    variants={clickedLinkVariants}
+                    initial="initial"
+                    animate={clickedIndex === index ? 'clicked' : 'initial'}
+                  >
+                    {link.replace(/-/g, ' ')}
+                  </motion.a>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </>
+      )}
+    </>
+  );
+};
+
+export default Navbar;

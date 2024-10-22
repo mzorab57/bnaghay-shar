@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FiPlay } from "react-icons/fi"; // Import Play Icon from react-icons
+import bg from "../../assets/images/BGG1.webp"; // Import Play Icon from react-icons
 
 const VideoCard = ({ number, title, description, videoSrc }) => {
   const [isModalOpen, setIsModalOpen] = useState(false); // State for modal open/close
@@ -17,6 +18,11 @@ const VideoCard = ({ number, title, description, videoSrc }) => {
       {/* Video card with play icon */}
       <div className="relative overflow-hidden cursor-pointer brightness-90 hover:brightness-110 duration-300 ease-out size-full ">
         <video
+          loading="lazy"
+          controls
+          poster={bg}
+          width="100%"
+          height="auto"
           loop
           muted
           className="object-cover size-full lg:w-[400px] lg:h-[550px]"

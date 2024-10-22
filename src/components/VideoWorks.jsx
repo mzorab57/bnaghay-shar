@@ -2,10 +2,8 @@ import React from "react";
 
 import VideoText from "./ui/VideoText";
 import VideoCard from "./ui/VideoCard";
-// import bg_1 from "../assets/images/BGG1.webp";
-// import bg_2 from "../assets/images/BGG2.webp";
-// import bg_3 from "../assets/images/BGG3.webp";
 import videoInter from "../assets/videos/interior-video.mp4";
+import videoVilla from "../assets/videos/villa-video1.mp4";
 import videoFlka from "../assets/videos/video-flka.mp4";
 
 
@@ -36,7 +34,7 @@ const VideoWorks = () => {
             number="03"
             title="Casa El Maqui"
             description="Architecture – Luxury Living"
-            videoSrc={videoInter}
+            videoSrc={videoVilla}
           />
         </div>
       </main>
