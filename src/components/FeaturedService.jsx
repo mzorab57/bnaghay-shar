@@ -180,7 +180,7 @@ const handleClick = () => {
             </div>
           ))}
         </Slider>
-        <div onClick={handleClick} className="absolute left-[36%] lg:left-[48%] ">
+        <div onClick={handleClick} className="absolute left-[36%] lg:left-[48%]  ">
           <p  className="w-full text-2xl pt-2 cursor-pointer ">Visit Gallery</p>
         </div>
       </div>
