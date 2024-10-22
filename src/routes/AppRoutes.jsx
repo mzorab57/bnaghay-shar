@@ -9,6 +9,7 @@ import Stats from "../components/Stats";
 import VideoWorks from "../components/VideoWorks";
 import Galary from "../pages/Galary";
 import Footer from "../layouts/Footer";
+import Showroom3D from "../components/Showroom3D ";
 
 
 const AppRoutes = () => {
@@ -28,6 +29,7 @@ const AppRoutes = () => {
               <Stats />
               <FeaturedService />
               <VideoWorks />
+              <Showroom3D />
               <Footer />
         
             </>
