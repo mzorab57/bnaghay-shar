@@ -18,7 +18,7 @@ const Stats = () => {
   ];
 
   return (
-    <div ref={ref} className=" py-10">
+    <div ref={ref} className=" py-16">
       <div className="container mx-auto grid  grid-cols-1 md:grid-cols-3 gap-4 text-center">
         
       

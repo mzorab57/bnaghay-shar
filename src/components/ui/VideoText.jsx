@@ -12,23 +12,23 @@ const VideoText = () => {
       <ul className="lg:space-y-12 space-y-6   ">
         <li className="text-lg text-gray-500 flex  items-center -space-x-1">
           <span className="w-2 h-2 bg-yellow-800 rounded-full  z-[1] "></span>
-          <span className='pb-0.5'>&#x268A; All Project </span>
+          <span className='pb-0.5 pl-2'> All Project </span>
         </li>
         <li className="text-lg text-gray-500 flex items-center -space-x-1">
           <span className="w-2 h-2 bg-yellow-800 rounded-full z-[1]"></span>
-          <span className='pb-0.5'> &#x268A; Architecture</span>
+          <span className='pb-0.5 pl-2'>  Round About</span>
         </li>
         <li className="text-lg text-gray-500 flex items-center -space-x-1">
           <span className="w-2 h-2 bg-yellow-800 rounded-full z-[1]"></span>
-          <span className='pb-0.5'> &#x268A; Interior </span>
+          <span className='pb-0.5 pl-2'>  Interior </span>
         </li>
         <li className="text-lg text-gray-500 flex items-center -space-x-1">
           <span className="w-2 h-2 bg-yellow-800 rounded-full z-[1]"></span>
-          <span className='pb-0.5'> &#x268A; Residential</span>
+          <span className='pb-0.5 pl-2'>  Garden</span>
         </li>
         <li className="text-lg text-gray-500 flex items-center -space-x-1">
           <span className="w-2 h-2 bg-yellow-800 rounded-full z-[1]"></span>
-          <span className='pb-0.5'> &#x268A; Exterior </span>
+          <span className='pb-0.5 pl-2'>  Exterior </span>
         </li>
       </ul>
     </aside>

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { FiPlay } from "react-icons/fi"; // Import Play Icon from react-icons
-import bg from "../../assets/images/BGG1.webp"; // Import Play Icon from react-icons
 
-const VideoCard = ({ number, title, description, videoSrc }) => {
+
+
+const VideoCard = ({ number, title, description, videoSrc, poster }) => {
   const [isModalOpen, setIsModalOpen] = useState(false); // State for modal open/close
 
   const handlePlayClick = () => {
@@ -20,7 +21,7 @@ const VideoCard = ({ number, title, description, videoSrc }) => {
         <video
           loading="lazy"
           controls
-          poster={bg}
+          poster={poster}
           width="100%"
           height="auto"
           loop
@@ -40,7 +41,7 @@ const VideoCard = ({ number, title, description, videoSrc }) => {
           className="absolute inset-0 flex justify-center items-center text-white text-6xl"
           onClick={handlePlayClick}
         >
-          <FiPlay className="hover:scale-110 transition duration-300" />
+          <FiPlay className="hover:scale-110 transition duration-300 hidden lg:block" />
         </div>
       </div>
 

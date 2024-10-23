@@ -13,13 +13,14 @@ import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 
 // Import images
-import bg_1 from "../assets/images/BGG1.webp";
-import bg_2 from "../assets/images/BGG2.webp";
-import bg_3 from "../assets/images/BGG3.webp";
-import bg_4 from "../assets/images/BGG4.jpg";
+import bg_1 from "../assets/images/gardenQaiwan (1).webp";
+import bg_2 from "../assets/images/inter (5).webp";
+import bg_3 from "../assets/images/aboutUs.webp";
+import bg_4 from "../assets/images/inter (4).webp";
+import bg_6 from "../assets/images/ra (4).webp";
 import bg_5 from "../assets/images/bnaghashar_logo.png";
 
-import { SiAffinitydesigner } from "react-icons/si";
+
 import { SlArrowRightCircle, SlArrowLeftCircle } from "react-icons/sl";
 import { useNavigate } from "react-router-dom";
 
@@ -61,34 +62,35 @@ const handleClick = () => {
   // Service data
   const services = [
     {
-      title: "Architecture",
+      title: "Bed Room",
       image: bg_4,
-      category: "Architecture",
-      icon: <SiAffinitydesigner size={30} />,
+      category: "Interior",
+      
     },
     {
       title: "Architecture",
       image: bg_3,
-      category: "Architecture",
-      icon: <SiAffinitydesigner size={30} />,
+      category: "Exterior",
+      
     },
     {
-      title: "Interior Work",
+      title: "Garden Qaiwan City",
       image: bg_1,
-      category: "Interior Design",
-      icon: <SiAffinitydesigner size={30} />,
+      category: "Exterior",
+      
     },
     {
-      title: "Decoration Art",
+      title: "Bed Room",
       image: bg_2,
-      category: "Architecture",
-      icon: <SiAffinitydesigner size={30} />,
+      category: "Interior",
+      
     },
+   
     {
-      title: "2D/3D Design",
-      image: bg_1,
-      category: "Furniture",
-      icon: <SiAffinitydesigner size={30} />,
+      title: "Round About",
+      image: bg_6,
+      category: "Exterior",
+      
     },
   ];
 
@@ -145,7 +147,7 @@ const handleClick = () => {
       {/* Title Section */}
       <div className="text-center">
         <h3 className="text-sm font-semibold text-gray-400">Work We Offer</h3>
-        <h2 className="text-3xl font-bold text-black my-2">
+        <h2 className="lg:text-4xl text-3xl pb-6 font-bold text-black my-2">
           Our Featured Work
         </h2>
       </div>
@@ -163,16 +165,14 @@ const handleClick = () => {
                   alt={service.title}
                   className="w-full h-[400px] md:h-[500px] lg:h-[600px] object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="p-4 text-left absolute top-0 bg-gradient-to-t from-black/60 via-transparent to-transparent">
+                <div className="p-4 text-left absolute top-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent">
                   <h3 className="text-sm font-semibold text-white">
                     {service.category}
                   </h3>
                   <h2 className="text-lg font-bold text-white my-2 flex justify-between items-center">
                     <span className="mr-2">
                       {service.title}
-                      <span className="text-yellow-200 font-semibold">
-                        {service.icon}
-                      </span>
+                     
                     </span>
                   </h2>
                 </div>
@@ -194,7 +194,7 @@ const handleClick = () => {
         close={() => setIsOpen(false)}
         styles={{
           thumbnail: {
-            borderColor: "#FCD34e",
+            borderColor: "#1b6379",
             // backgroundColor: "blue", // Change this to your desired color
             // width:"20vh"
           },

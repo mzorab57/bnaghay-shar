@@ -6,6 +6,10 @@ import videoInter from "../assets/videos/interior-video.mp4";
 import videoVilla from "../assets/videos/villa-video1.mp4";
 import videoFlka from "../assets/videos/video-flka.mp4";
 
+import inter from "../assets/images/inter (4).webp";
+import roundAbout from "../assets/images/ra (2).webp";
+import garden from "../assets/images/BGG4.jpg";
+
 
 
 const VideoWorks = () => {
@@ -23,18 +27,21 @@ const VideoWorks = () => {
             title="Modern Family House"
             description="Architecture – Luxury Living"
             videoSrc={videoInter}
+            poster={inter}
           />
           <VideoCard
             number="02"
             title="Student Residence Areosa"
             description="Architecture – Luxury Living"
             videoSrc={videoFlka}
+            poster={roundAbout}
           />
           <VideoCard
             number="03"
             title="Casa El Maqui"
             description="Architecture – Luxury Living"
             videoSrc={videoVilla}
+            poster={garden}
           />
         </div>
       </main>

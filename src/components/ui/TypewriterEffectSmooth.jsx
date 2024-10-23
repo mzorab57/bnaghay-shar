@@ -69,7 +69,7 @@ export const TypewriterEffectSmooth = ({ images }) => {
               transition: "width 0.4s  ease-out",
             }}
           >
-            <p>Build design with</p>
+            <p className="text-[#4fcdcd]">Build design</p>
           </div>
 
           {/* Subtitle */}

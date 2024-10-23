@@ -17,28 +17,37 @@ const CategoryFilter = ({activeFilter, setActiveFilter}) => {
       </li>
       <li
         className={`cursor-pointer ${
-          activeFilter === "agency" ? " text-yellow-500" : ""
+          activeFilter === "interior" ? " text-yellow-500" : ""
         }`}
-        onClick={() => setActiveFilter("agency")}
+        onClick={() => setActiveFilter("interior")}
       >
-        Agency Interior
+         Interior
+      </li>
+      {/* <li
+        className={`cursor-pointer ${
+          activeFilter === "exterior" ? " text-yellow-500" : ""
+        }`}
+        onClick={() => setActiveFilter("exterior")}
+      >
+        Exterior
+      </li> */}
+      <li
+        className={`cursor-pointer ${
+          activeFilter === "garden" ? " text-yellow-500" : ""
+        }`}
+        onClick={() => setActiveFilter("garden")}
+      >
+       Garden
       </li>
       <li
         className={`cursor-pointer ${
-          activeFilter === "ecomer" ? " text-yellow-500" : ""
+          activeFilter === "raoundAbout" ? " text-yellow-500" : ""
         }`}
-        onClick={() => setActiveFilter("ecomer")}
+        onClick={() => setActiveFilter("raoundAbout")}
       >
-        Ecommerce Interior
+        Round About
       </li>
-      <li
-        className={`cursor-pointer ${
-          activeFilter === "resident" ? " text-yellow-500" : ""
-        }`}
-        onClick={() => setActiveFilter("resident")}
-      >
-        Residential Interior
-      </li>
+    
     </ul>
   </div>
   
