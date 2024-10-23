@@ -52,7 +52,7 @@ const handleClick = () => {
   navigate("/gallery");
   window.scrollTo({
     top: 0,
-    behavior: "smooth", // Optional: You can use "auto" for immediate scrolling
+    // behavior: "instant", // Optional: You can use "auto" for immediate scrolling
   });
 };
   // Lightbox state
