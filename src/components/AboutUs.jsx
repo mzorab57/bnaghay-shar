@@ -37,7 +37,7 @@ const AboutUs = () => {
   };
 
   return (
-    <div className=" py-10">
+    <div name="about" className=" py-10">
       {/* Main container */}
       <div className="container max-w-[1500px]  m-auto p-6">
         {/* Flex container */}

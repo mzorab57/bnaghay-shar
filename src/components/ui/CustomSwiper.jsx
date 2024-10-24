@@ -4,9 +4,9 @@ import bg1 from "../../assets/images/bg (1).webp";
 import bg2 from "../../assets/images/bg (2).webp";
 // import bg3 from "../../assets/images/aboutUs.webp";
 import bg4 from "../../assets/images/bg (3).webp";
-import bg6 from "../../assets/images/bg (4).webp";
+// import bg6 from "../../assets/images/bg (4).webp";
 
-const images = [bg4,bg2,bg1,bg6]; // List of images
+const images = [bg4,bg2,bg1]; // List of images
 
 const CustomSwiper = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

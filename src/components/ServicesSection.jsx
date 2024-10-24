@@ -10,7 +10,7 @@ import icon4 from "../assets/images/interior-04.png";
 import icon12 from "../assets/images/interior-10.png";
 
 // icon
-import { SiInternetarchive } from "react-icons/si";
+// import { SiInternetarchive } from "react-icons/si";
 
 
 // Import Images
@@ -43,7 +43,7 @@ const servicesData = [
 
 const ServicesSection = () => {
   return (
-    <section className="bg-gray-50 py-24 min-h-screen">
+    <section name="service" className="bg-gray-50 py-24 min-h-screen">
     <div className="container mx-auto px-4">
       {/* Section Title */}
       <div className="text-center mb-12">

@@ -4,14 +4,10 @@ import AppRoutes from "./routes/AppRoutes";
 import { BrowserRouter } from "react-router-dom";
 
 const App = () => {
- 
-  
-
   return (
     <BrowserRouter>
       <Navbar />
       <AppRoutes />
-     
     </BrowserRouter>
   );
 };

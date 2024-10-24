@@ -37,7 +37,7 @@ export const TypewriterEffectSmooth = ({ images }) => {
               loading="lazy"
               src={image}
               alt={`Slide ${index}`}
-              className="object-cover size-full"
+              className="object-cover size-full brightness-75 "
             />
           </div>
         ))}
@@ -49,13 +49,13 @@ export const TypewriterEffectSmooth = ({ images }) => {
     <div className={"relative h-[550px] lg:h-[700px] w-[1200px] mx-6  shadow-lg shadow-gray-50/20 "}>
       <motion.div
         className=" "
-        initial={{ height: 100, opacity:0 }}
-        animate={{ height: 0, opacity:1  }}
+        initial={{  opacity:0 }}
+        animate={{  opacity:1  }}
         transition={{
-          duration: 2,
+          duration: 4,
           ease: "linear",
           repeat: Infinity,
-          repeatDelay: 3,
+          repeatDelay: 1,
         }}
       >
         {/* Render the main content */}
@@ -64,16 +64,16 @@ export const TypewriterEffectSmooth = ({ images }) => {
         <div className="flex flex-col justify-center pl-4  h-full absolute ">
           <div
             key={key}
-            className="  max-w-2xl text-white font-semibold text-2xl md:text-4xl xl:text-6xl whitespace-nowrap overflow-hidden"
+            className="  max-w-2xl text-white font-semibold text-3xl md:text-4xl xl:text-6xl whitespace-nowrap overflow-hidden"
             style={{
               transition: "width 0.4s  ease-out",
             }}
           >
-            <p className="text-[#4fcdcd]">Build design</p>
+            <p className="text-[#37a1c2]">Building design</p>
           </div>
 
           {/* Subtitle */}
-          <p className="text-md  md:text-2xl text-white font-light max-w-2xl break-words whitespace-pre-wrap">
+          <p className="text-lg  md:text-2xl text-white font-normal max-w-2xl break-words whitespace-pre-wrap">
             Architecture never derived its force from stability of culture, but
             rather from the expression of those moments when that sense of
             stability slipped.

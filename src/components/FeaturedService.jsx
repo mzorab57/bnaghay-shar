@@ -136,7 +136,7 @@ const handleClick = () => {
   };
 
   return (
-    <section className="py-12 bg-gray-50 w-full bg-no-repeat relative">
+    <section name="work" className="py-12 bg-gray-50 w-full bg-no-repeat relative">
       {/* Background Logo (Hidden on large screens) */}
       <img
         src={bg_5}
